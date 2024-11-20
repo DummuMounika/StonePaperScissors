@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div score="score-board">
+    <div class="score-board">
         <div class="score">
             <p id="user-score">0</p>
             <p>You</p>
@@ -34,6 +34,29 @@
     <div class="msg-container">
         <div id="msg">Play your move</div>
     </div>
+
+    <div class="score-history">
+        <div class="selectedOption">
+            <table id="usersTable">
+                <caption>Game Option History</caption>
+                <thead>
+                    <tr>
+                        <th>user-option</th>
+                        <th>comp-option</th>
+                        <th>wonBy</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>Option not selected</td>
+                        <td>Option not selected</td>
+                        <td>No user won Yet!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
