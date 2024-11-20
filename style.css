@@ -66,3 +66,58 @@ img {
     border-radius: 1rem;
     padding: 1rem;
 }
+
+.score-history{
+    margin-top: -20%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-right: 4rem;
+    text-align: left;
+}
+
+#usersTable {
+    width:100%;
+}
+
+.selectedOption  {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+table, td, th {
+    border: 3px solid rgb(23, 21, 21);
+    text-align: left;
+}
+
+table{
+    display: table;
+    border-collapse: collapse;
+    width:100%;
+    border-spacing: 2px;
+    font-size: 1.2rem;
+    
+}
+
+tbody {
+    background-color:beige;
+}
+
+thead {
+    background-color:cadetblue;
+}
+
+th, td{
+    padding: 5px;
+    font-weight: bold;
+}
+
+table tr th{
+    height: 1px;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    gap: 5rem;
+}
+
