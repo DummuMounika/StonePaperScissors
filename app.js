@@ -9,6 +9,7 @@ const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 const tableBody = document.getElementById('usersTable').getElementsByTagName('tbody');
+const tableFirstRow = document.getElementById('first-row');
 
 const genCompChoice = () => {
     //rock, paper, scissors
@@ -43,7 +44,7 @@ const showWinner = (userWin, userChoice, compChoice, options) => {
         msg.innerText = `You lose! Your ${compChoice} beats ${userChoice}`;
         msg.style.backgroundColor = "red";
     }
-
+    
         userOption.push(userChoice);
         compOption.push(compChoice);
 
@@ -52,15 +53,22 @@ const showWinner = (userWin, userChoice, compChoice, options) => {
         row.insertCell(1).textContent = compChoice;
         row.insertCell(2).textContent = userWin ? "Me"  : "Comp";
 
+        console.log("checking row created#3", row.cells[0].textContent);
+        console.log("test1",tableFirstRow);
+
         if (row.cells[2].textContent === "Comp") {
             row.cells[1].style.backgroundColor = "green";
-            row.cells[0].style.backgroundColor = "red";
+            row.cells[1].style.color = "white";
         } else if (row.cells[2].textContent === "Me") {
             row.cells[0].style.backgroundColor = "green";
-            row.cells[1].style.backgroundColor = "red";
+            row.cells[0].style.color = "white";
         }
-
-
+        
+        if(row.cells[0].textContent === 'scissors' || 
+            row.cells[0].textContent === 'paper' ||
+                row.cells[0].textContent === 'rock'){
+                    tableFirstRow.remove();
+        }
 }
 
 const playGame = (userChoice) => {
